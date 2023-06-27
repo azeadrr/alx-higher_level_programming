@@ -7,16 +7,16 @@ class Square:
 
     def __init__(self, size=0):
         """
-        size: The integer value of  size of the new square.
+        size: The integer value of size of new square
         """
         self.size = size
 
-        @property
+    @property
     def size(self):
-        """set size of the square."""
+        """set size of the square"""
         return (self.__size)
 
-    @size.settter
+    @size.setter
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
