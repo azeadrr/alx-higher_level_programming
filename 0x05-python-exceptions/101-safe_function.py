@@ -3,7 +3,6 @@
 import sys
 def safe_function(fct, *args):
     """
-    executes a function safely.
     fct: a pointer to a function
     args: the arguments for fct.
     Returns: if something happens during the function and prints in stderr the error precede by Exception
