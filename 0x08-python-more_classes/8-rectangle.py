@@ -6,6 +6,7 @@ class Rectangle:
     """rectangle class"""
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """
@@ -51,6 +52,19 @@ class Rectangle:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """
+        return greater area
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return (rect_1)
+        return (rect_2)
+
     def __str__(self):
         """represent rectangle with # character"""
         if self.__width == 0 or self.__height == 0:
@@ -58,7 +72,7 @@ class Rectangle:
 
         rect = []
         for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
@@ -70,6 +84,6 @@ class Rectangle:
         return (rect)
 
     def __del__(self):
-        """print message for all delete """
+        """print message for all delete action """
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
