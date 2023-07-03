@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+The N queens puzzle is the challenge of placing N non-attacking queens on an N×N chessboard
+"""
 import sys
 
 
@@ -35,40 +37,32 @@ def xout(board, row, col):
         row: row of last played
         col: column of last played
     """
-    
     for c in range(col + 1, len(board)):
         board[row][c] = "x"
-    
     for c in range(col - 1, -1, -1):
         board[row][c] = "x"
-    
     for r in range(row + 1, len(board)):
         board[r][col] = "x"
-    
     for r in range(row - 1, -1, -1):
         board[r][col] = "x"
-    
     c = col + 1
     for r in range(row + 1, len(board)):
         if c >= len(board):
             break
         board[r][c] = "x"
         c += 1
-    
     c = col - 1
     for r in range(row - 1, -1, -1):
         if c < 0:
             break
         board[r][c]
         c -= 1
-    
     c = col + 1
     for r in range(row - 1, -1, -1):
         if c >= len(board):
             break
         board[r][c] = "x"
         c += 1
-    
     c = col - 1
     for r in range(row + 1, len(board)):
         if c < 0:
