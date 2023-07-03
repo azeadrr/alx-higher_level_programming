@@ -2,6 +2,7 @@
 """
 The N queens puzzle is the challenge of placing N non-attacking queens on an N×N chessboard
 """
+
 import sys
 
 
@@ -93,8 +94,7 @@ def recursive_solve(board, row, queens, solutions):
             tmp_board[row][c] = "Q"
             xout(tmp_board, row, c)
             solutions = recursive_solve(tmp_board, row + 1, queens + 1, solutions)
-
-    return (solutions)
+            return (solutions)
 
 
 if __name__ == "__main__":
