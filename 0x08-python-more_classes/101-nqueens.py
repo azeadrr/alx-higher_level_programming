@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """
+The N queens puzzle is the challenge of placing N non-attacking queens on an N×N chessboard
 """
 import sys
 
@@ -13,14 +14,14 @@ def init_board(n):
 
 
 def board_deepcopy(board):
-    """Return a deepcopy of a chessboard."""
+    """Return deepcopy of chessboard"""
     if isinstance(board, list):
         return list(map(board_deepcopy, board))
     return (board)
 
 
 def get_solution(board):
-    """Return the list of lists representation of a solved chessboard."""
+    """Return  list of solved chessboard"""
     solution = []
     for r in range(len(board)):
         for c in range(len(board)):
@@ -32,9 +33,9 @@ def get_solution(board):
 
 def xout(board, row, col):
     """
-        board (list): The current working chessboard.
-        row (int): The row where a queen was last played.
-        col (int): The column where a queen was last played.
+        board: current chessboard
+        row: row of last played
+        col: column of last played
     """
     # X out all forward spots
     for c in range(col + 1, len(board)):
@@ -80,8 +81,7 @@ def xout(board, row, col):
 
 def recursive_solve(board, row, queens, solutions):
     """
-    Returns:
-        solutions
+    Return: solution
     """
     if queens == len(board):
         solutions.append(get_solution(board))
