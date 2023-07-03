@@ -3,12 +3,7 @@
 
 
 class Rectangle:
-    """rectangle class
-    
-    attributes:
-        number_of_instances: number instances
-        print_symbol: symbol used
-    """
+    """rectangle class"""
 
     number_of_instances = 0
     print_symbol = "#"
@@ -73,7 +68,7 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """
-        return a width and height equal to size with new rectangle 
+        return a width and height equal to size with new rectangle
         """
         return (cls(size, size))
 
