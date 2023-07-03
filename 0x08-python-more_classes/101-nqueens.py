@@ -6,7 +6,7 @@ import sys
 
 
 def init_board(n):
-    """Initialize an `n`x`n` sized chessboard with 0's."""
+    """initialize n x n"""
     board = []
     [board.append([]) for i in range(n)]
     [row.append(' ') for i in range(n) for row in board]
@@ -21,7 +21,7 @@ def board_deepcopy(board):
 
 
 def get_solution(board):
-    """Return  list of solved chessboard"""
+    """Return list of solved chessboard"""
     solution = []
     for r in range(len(board)):
         for c in range(len(board)):
@@ -37,40 +37,40 @@ def xout(board, row, col):
         row: row of last played
         col: column of last played
     """
-    # X out all forward spots
+    #xout all forward
     for c in range(col + 1, len(board)):
         board[row][c] = "x"
-    # X out all backwards spots
+    #xout all backwards
     for c in range(col - 1, -1, -1):
         board[row][c] = "x"
-    # X out all spots below
+    #xout all below
     for r in range(row + 1, len(board)):
         board[r][col] = "x"
-    # X out all spots above
+    #xout all above
     for r in range(row - 1, -1, -1):
         board[r][col] = "x"
-    # X out all spots diagonally down to the right
+    #xout all down to the right
     c = col + 1
     for r in range(row + 1, len(board)):
         if c >= len(board):
             break
         board[r][c] = "x"
         c += 1
-    # X out all spots diagonally up to the left
+    #xout all up to the left
     c = col - 1
     for r in range(row - 1, -1, -1):
         if c < 0:
             break
         board[r][c]
         c -= 1
-    # X out all spots diagonally up to the right
+    #xout all up to the right
     c = col + 1
     for r in range(row - 1, -1, -1):
         if c >= len(board):
             break
         board[r][c] = "x"
         c += 1
-    # X out all spots diagonally down to the left
+    #xout all down to the left
     c = col - 1
     for r in range(row + 1, len(board)):
         if c < 0:
@@ -92,8 +92,7 @@ def recursive_solve(board, row, queens, solutions):
             tmp_board = board_deepcopy(board)
             tmp_board[row][c] = "Q"
             xout(tmp_board, row, c)
-            solutions = recursive_solve(tmp_board, row + 1,
-                                        queens + 1, solutions)
+            solutions = recursive_solve(tmp_board, row + 1, queens + 1, solutions)
 
     return (solutions)
 
