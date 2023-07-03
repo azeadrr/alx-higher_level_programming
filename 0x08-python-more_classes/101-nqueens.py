@@ -5,7 +5,7 @@ import sys
 
 def init_board(n):
     """
-    initialize n x n 
+    initialize n x n
     """
     board = []
     [board.append([]) for i in range(n)]
