@@ -95,7 +95,7 @@ def recursive_solve(board, row, queens, solutions):
             xout(tmp_board, row, c)
             solutions = recursive_solve(tmp_board, row + 1, queens + 1, solutions)
 
-        return (solutions)
+    return (solutions)
 
 
 if __name__ == "__main__":
