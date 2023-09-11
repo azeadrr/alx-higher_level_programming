@@ -2,7 +2,7 @@
 
 if (process.argv.length <= 3)
 {
-  console.log(0);
+  console.log('0');
 }
 else
 {
@@ -11,4 +11,3 @@ else
     .sort((a, b) => a - b);
   console.log(args[args.length - 2]);
 }
-
