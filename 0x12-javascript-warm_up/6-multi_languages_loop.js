@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const letter = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-letter.forEach((val, index) => 
+letter.forEach((value, index) => 
 {
-  console.log(`${val}`);
+  console.log(`${value}`);
 });
