@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
-const letter = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-letter.forEach((val, index) => {
+const array = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+array.forEach((val, index) => {
 	console.log(`${val}`);});
