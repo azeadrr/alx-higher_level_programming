@@ -1,5 +1,5 @@
 #!/usr/bin/node
-for (const phr of ['C is fun', 'Python is cool', 'JavaScript is amazing']) 
-{
-  console.log(phr);
-}
+const array = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+array.forEach((value, index) => {
+  console.log(`${value}`);
+});
