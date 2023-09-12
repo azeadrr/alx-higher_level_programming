@@ -10,5 +10,4 @@ if (!isNaN(value)) {
     }
     console.log(output);
   }
-} else { 
-	console.log('Missing size'); }
+} else { console.log('Missing size'); }
