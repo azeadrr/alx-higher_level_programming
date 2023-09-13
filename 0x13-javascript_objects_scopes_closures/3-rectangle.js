@@ -9,7 +9,7 @@ class Rectangle {
   }
 
   print () {
-    for (let index = 0; index < this.height; index++) {
+    for (let i = 0; i < this.height; i++) {
       let ph = '';
       for (let inf = 0; inf < this.width; inf++) {
         ph += 'X';
@@ -18,3 +18,4 @@ class Rectangle {
     }
   }
 }
+module.exports = Rectangle;
