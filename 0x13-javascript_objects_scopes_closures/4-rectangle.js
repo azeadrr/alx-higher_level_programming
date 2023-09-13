@@ -2,22 +2,26 @@
 
 class Rectangle {
   constructor (w, h) {
-    if (w > 0 && h > 0) { [this.width, this.height] = [w, h]; }
+    if (w > 0 && h > 0) {
+      this.width = w;
+      this.height = h;
+    }
   }
+
   print () {
-    for (let i = 0; i < this.height; i++) {
-      let ph = '';
-      for (let inf = 0; inf < this.width; inf++) {
-        ph += 'X';
+    for (let index = 0; index < this.height; index++) {
+      let line = '';
+      for (let jdx = 0; jdx < this.width; jdx++) {
+        line += 'X';
       }
-      console.log(ph);
+      console.log(line);
     }
   }
 
   rotate () {
-    const both = this.height;
+    const replacer = this.height;
     this.height = this.width;
-    this.width = both;
+    this.width = replacer;
   }
 
   double () {
