@@ -9,19 +9,19 @@ class Rectangle {
   }
 
   print () {
-    for (let index = 0; index < this.height; index++) {
-      let line = '';
-      for (let jdx = 0; jdx < this.width; jdx++) {
-        line += 'X';
+    for (let i = 0; i < this.height; i++) {
+      let ph = '';
+      for (let vl = 0; vl < this.width; vl++) {
+        ph += 'X';
       }
-      console.log(line);
+      console.log(ph);
     }
   }
 
   rotate () {
-    const replacer = this.height;
+    const both = this.height;
     this.height = this.width;
-    this.width = replacer;
+    this.width = both;
   }
 
   double () {
