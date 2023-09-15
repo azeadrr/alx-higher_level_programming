@@ -10,8 +10,8 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3])
     cur = db.cursor()
     cur.execute("SELECT * FROM states")
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    lines = cur.fetchall()
+    for line in lines:
+        print(line)
     cur.close()
     db.close()
