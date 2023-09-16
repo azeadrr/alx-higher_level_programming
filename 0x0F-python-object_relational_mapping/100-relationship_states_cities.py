@@ -3,7 +3,6 @@
 script that creates the State “California” with the City
 “San Francisco” from the database hbtn_0e_100_usa
 """
-
 from relationship_state import State
 from relationship_city import Base, City
 from sqlalchemy import create_engine
