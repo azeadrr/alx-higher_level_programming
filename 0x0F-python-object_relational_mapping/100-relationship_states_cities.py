@@ -10,6 +10,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import sys
 
+
 if __name__ == '__main__':
     meta = Base.metadata
     engine = create_engine('
