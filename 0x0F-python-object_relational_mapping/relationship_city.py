@@ -1,18 +1,27 @@
 #!/usr/bin/python3
 """
-Contains the class definition of a City
+this module contains the class definition of a City
+and an instance Base = declarative_base().
 """
-from relationship_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 
 
+Base = declarative_base()
+
+
 class City(Base):
     """
-    Class that defines each city
-    """
+      the class definition of the City that inherits the
+      Base calss
+
+      Attributes:
+          id (int): id of the city.
+          name (str): the name of the city.
+          state_id (int): id of the state as foreign key
+      """
     __tablename__ = 'cities'
-    id = Column(Integer, unique=True, nullable=False, primary_key=True)
+
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
-
