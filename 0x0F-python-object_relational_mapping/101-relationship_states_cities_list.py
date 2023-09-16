@@ -18,7 +18,6 @@ if __name__ == '__main__':
         pool_pre_ping=True, pool_recycle=False)
     Session = sessionmaker(bind=engine)
     session = Session()
-
     st_ct = session.query(State).order_by(State.id)
     for state in st_ct:
         print("{}: {}".format(state.id, state.name))
