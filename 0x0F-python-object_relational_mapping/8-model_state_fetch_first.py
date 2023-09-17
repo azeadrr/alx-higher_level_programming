@@ -3,9 +3,9 @@
 object from the database hbtn_0e_6_usa"""
 
 import sys
+from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 from sqlalchemy import (create_engine)
-from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == "__main__":
@@ -14,8 +14,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    instance = session.query(State).first()
-    if instance is None:
+    cities = session.query(State).first()
+    if cities is None:
         print("Nothing")
     else:
-        print(instance.id, instance.name, sep=": ")
+        print(cities.id, cities.name, sep=": ")
