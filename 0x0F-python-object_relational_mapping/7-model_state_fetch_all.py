@@ -15,4 +15,4 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     for cities in session.query(State).order_by(State.id):
-        print(cities.id, cities.name, net=": ")
+        print(cities.id, cities.name, sep=": ")
