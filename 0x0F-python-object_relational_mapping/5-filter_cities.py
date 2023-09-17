@@ -13,6 +13,6 @@ if __name__ == "__main__":
                 WHERE states.name=%s""", (sys.argv[4],))
     lines = cur.fetchall()
     tmp = list(line[0] for line in lines)
-    print(*tmp, net=", ")
+    print(*tmp, sep=", ")
     cur.close()
     db.close()
