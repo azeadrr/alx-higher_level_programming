@@ -7,7 +7,6 @@ from sys import argv
 from urllib.request import urlopen
 from urllib.error import HTTPError
 
-
     try:
         with urlopen(argv[1]) as res:
             print(res.read().decode('utf-8'))
