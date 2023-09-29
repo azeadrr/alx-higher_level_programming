@@ -8,7 +8,7 @@ if __name__ == '__main__':
     from requests.auth import HTTPBasicAuth
     tkn = argv[2]
     usr = argv[1]
-    login = HTTPBasicAuth(user, tkn)
+    login = HTTPBasicAuth(usr, tkn)
 
     reqs = get('https://api.github.com/user', auth=login)
     json = reqs.json()
