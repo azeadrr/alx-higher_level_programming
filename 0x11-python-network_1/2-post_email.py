@@ -3,9 +3,9 @@
 sends a POST request to passed URL with email"""
 
 if __name__ == "__main__":
-    from sys import argv
     from urllib.request import urlopen, Request
     from urllib.parse import urlencode
+    from sys import argv
    
     url = argv[1]
     email = {'email': argv[2]}
