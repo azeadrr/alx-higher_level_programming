@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Python script that takes in a URL and an email,
-sends a POST request to the passed URL with email as parameter"""
+"""Python script that takes in URL and email,
+sends a POST request to passed URL with email"""
 if __name__ == "__main__":
     from sys import argv
     from urllib.request import urlopen, Request
