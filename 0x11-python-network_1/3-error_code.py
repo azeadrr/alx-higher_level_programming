@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""Python script that takes in URL,
-sends requestto URL and displays body"""
+"""Python script that takes in URL
+sends request to URL and displays body"""
+
 
 if __name__ == "__main__":
     from urllib.request import urlopen
