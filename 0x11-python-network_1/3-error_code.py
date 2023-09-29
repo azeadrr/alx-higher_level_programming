@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-"""Python script that takes in URL, sends request
-to URL and displays body of response decoded in utf-8"""
+"""Python script that takes in URL,
+sends requestto URL and displays body"""
 
 if __name__ == "__main__":
+    from sys import argv
     from urllib.request import urlopen
     from urllib.error import HTTPError
-    from sys import argv
 
-     try:
+    try:
         with urlopen(argv[1]) as res:
              nes = res.read().decode('utf-8')
              print(nes)
     except HTTPError as er:
-        req = 'Error code: {}'.format(er.code)
-        print(req)
+        print('Error code: {}'.format(er.code))
