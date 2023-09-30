@@ -14,8 +14,8 @@ if __name__ == '__main__':
 
     try:
         for i in range(10):
-            hr = json[i].get('sha')
+            sha = json[i].get('sha')
             name = json[i].get('commit').get('author').get('name')
-            print("{}: {}".format(hr, name))
+            print("{}: {}".format(sha, name))
     except IndexError:
         pass
