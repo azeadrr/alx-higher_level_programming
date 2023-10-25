@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 const reqst = require('request');
 const apiStarWar = process.argv[2];
 let count = 0;
