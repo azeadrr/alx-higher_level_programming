@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const reqst = require('request');
-reqst(process.argv[2], (_err, _resp, body) => {
+reqst(process.argv[2], (err, _resp, body) => {
   if (err) {
     console.log(err);
   } else {
