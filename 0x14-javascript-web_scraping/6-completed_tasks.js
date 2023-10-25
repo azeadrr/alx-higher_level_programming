@@ -8,13 +8,13 @@ reqst(process.argv[2], (err, _resp, body) => {
     const res = JSON.parse(body);
     let idx = 0;
     while (idx < res.length) {
-      const userId = res[idx].userId;
+      const usrId = res[idx].usrId;
       const completed = res[idx].completed;
-      if (completed && !tasksDone[userId]) {
-        tasksDone[userId] = 0;
+      if (completed && !tasksDone[usrId]) {
+        tasksDone[usrId] = 0;
       }
       if (completed) {
-        ++tasksDone[userId];
+        ++tasksDone[usrId];
       }
       idx = idx + 1;
     }
