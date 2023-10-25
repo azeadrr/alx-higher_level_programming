@@ -9,13 +9,13 @@ reqst(process.argv[2], (err, _resp, body) => {
     const res = JSON.parse(body);
     let idx = 0;
     while (idx < res.length) {
-      const usrId = res[idx].usrId;
+      const userId = res[idx].userId;
       const cmplt = res[idx].cmplt;
-      if (cmplt && !tskDone[usrId]) {
-        tskDone[usrId] = 0;
+      if (cmplt && !tskDone[userId]) {
+        tskDone[userId] = 0;
       }
       if (cmplt) {
-        ++tskDone[usrId];
+        ++tskDone[userId];
       }
       idx += 1;
     }
